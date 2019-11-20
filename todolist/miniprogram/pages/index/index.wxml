@@ -1,0 +1,23 @@
+<!-- 表单区域 -->
+<view class="form-bar">
+</view>
+<!-- 列表区域 -->
+<view class="list-bar">
+  <view 
+  wx:for="{{todoList}}"
+  wx:key="index"
+  class="list-item {{item.isCheck?'active':''}}" 
+  bindtap="checkHandle"
+  data-id="{{item.id}}"
+  >
+    <view class="item-chekbox">
+      <checkbox checked="{{item.isCheck}}"/>
+    </view>
+    <view class="item-title">
+      {{item.title}}
+    </view>
+    <view class="item-btn">
+      <button size="mini" type="warn" data-id="{{item.id}}" bindtap="doneHandle">完成</button>
+    </view>
+  </view>
+</view>

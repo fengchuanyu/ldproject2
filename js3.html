@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5,6,7,8,9];
+        var arr2 = arr.map((item,index,arr)=>{
+            if(item != 3){
+                return item
+            }
+           
+        }) 
+        console.log(arr2);
+
+
+        // // 1>2?1:2
+        // var arr = [1,2,3,4,5,6,3,8,9];
+        // var arr2 = arr.filter((item,index,arr)=>{
+        //     if(item!=3){
+        //         return item
+        //     }
+        // }) 
+        // console.log(arr2);  
+    </script>
+</body>
+</html>
