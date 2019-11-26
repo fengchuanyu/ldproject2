@@ -15,3 +15,8 @@ item-btn{
 .active{
   background-color: purple;
 }
+.inp{
+  padding:20rpx;
+  border-top:1px solid black;
+  border-bottom:1px solid black;
+}

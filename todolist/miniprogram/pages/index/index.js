@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inpVal:"",
+    nowId:103,
     todoList:[
       {
         id:101,
@@ -48,6 +50,42 @@ Page({
       }
     })
     console.log(nowList);
+    this.setData({
+      todoList: nowList
+    })
+  },
+  //完成选中
+  doneCheckHandle(){
+    let nowList = this.data.todoList;
+    nowList = nowList.filter((item)=>{
+      if(!item.isCheck){
+        return item
+      }
+    })
+    console.log(nowList)
+    this.setData({
+      todoList:nowList
+    })
+  },
+  //文本框事件
+  inpHandle(e){
+    this.setData({
+      inpVal: e.detail.value
+    })
+  },
+  //添加处理事件
+  addHandle(){
+    let nowList = this.data.todoList;
+    nowList.push({
+      id:++this.data.nowId,
+      title:this.data.inpVal,
+      isCheck:false
+    })
+    console.log(nowList)
+    this.setData({
+      todoList:nowList,
+      inpVal:""
+    })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -1,5 +1,9 @@
 <!-- 表单区域 -->
 <view class="form-bar">
+  <view class="inp">
+    <input value="{{inpVal}}" bindinput="inpHandle" placeholder="请输入待办事项" />
+  </view>
+  <button bindtap="addHandle" type="primary">添加</button>
 </view>
 <!-- 列表区域 -->
 <view class="list-bar">
@@ -21,3 +25,4 @@
     </view>
   </view>
 </view>
+<button size="mini" type="warn" bindtap="doneCheckHandle">完成选中</button>
