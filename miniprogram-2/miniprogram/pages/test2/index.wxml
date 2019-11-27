@@ -1,0 +1,14 @@
+<swiper 
+indicator-dots="{{indicatorDots}}"
+autoplay="{{autoplay}}"
+interval="{{interval}}"
+circular="{{circular}}"
+>
+  <block wx:for="{{background}}" wx:key="*this">
+    <swiper-item>
+      <view class="swiper-item {{item}}"></view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<slider min="500" max="5000" show-value bindchange="sliderHandle" />
