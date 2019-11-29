@@ -1,0 +1,16 @@
+.list-item{
+  padding: 30rpx;
+  display: flex;
+  border-bottom:1px solid black;
+}
+.li-left{
+  flex:2;
+}
+.li-left .li-img{
+  width: 100%;
+}
+
+.li-right{
+  flex:4;
+  padding-left:20rpx;
+}
