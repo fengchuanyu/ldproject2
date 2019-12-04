@@ -25,6 +25,7 @@ Page({
     wx.request({
       url: 'http://m.maoyan.com/ajax/movieOnInfoList',
       success(res) {
+        wx.hideLoading()
         _this.setData({
           movieList: _this.fromatUrl(res.data.movieList),
           movieIds: res.data.movieIds
@@ -63,7 +64,13 @@ Page({
     })
     return thisList;
   },
-
+  //跳转详情页面
+  goDetail(e){
+    let thisId = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../detail/index?id=' + thisId,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

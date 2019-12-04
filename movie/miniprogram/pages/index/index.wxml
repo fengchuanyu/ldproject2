@@ -2,6 +2,8 @@
   <view class="list-item" 
     wx:for="{{movieList}}"
     wx:key="index"
+    bindtap="goDetail"
+    data-id="{{item.id}}"
   >
     <view class="li-left">
       <image class="li-img" mode="widthFix" src="{{item.img}}" />

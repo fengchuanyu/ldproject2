@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// var timer = new Date();
+		// console.log(Date.parse(timer).toString().substr(0,10));
+
+		// var num = Math.random()
+		// console.log(num.toString(16).substr(2));
+		
+		//获取时间戳
+		function getTimeStamp(){
+			var timer = new Date();
+			return(Date.parse(timer).toString().substr(0, 10));
+		}
+		//获取随机字符串
+		function getNonceStr(){
+			var num = Math.random()
+			return(num.toString(16).substr(2));
+		}
+
+
+
+
+		
+		let data = {
+      app_id:"2125167716",
+      time_stamp:getTimeStamp(),
+      nonce_str:getNonceStr(),
+      session:"10000",
+      question:"你叫啥"
+    }
+		
+	</script>
+</body>
+
+</html>
