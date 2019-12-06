@@ -32,12 +32,20 @@
 
 		
 		let data = {
-      app_id:"2125167716",
-      time_stamp:getTimeStamp(),
-      nonce_str:getNonceStr(),
-      session:"10000",
-      question:"你叫啥"
-    }
+			app_id:"2125167716",
+			time_stamp:getTimeStamp(),
+			nonce_str:getNonceStr(),
+			session:"10000",
+			question:"你叫啥"
+		}
+		let keyList = Object.keys(data).sort();
+		
+		let urlStr = ""
+		keyList.map((item)=>{
+			urlStr+=item+"="+ encodeURI(data[item]) +"&"
+		})
+		console.log(urlStr);
+		
 		
 	</script>
 </body>

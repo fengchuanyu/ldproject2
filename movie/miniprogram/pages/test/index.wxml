@@ -1,0 +1,5 @@
+<linda bindteshand="testHandle" testnum="{{num}}">
+<text slot="before">东北</text>
+<text slot="after">软件工程</text>
+</linda>
+<view>{{sum}}</view>

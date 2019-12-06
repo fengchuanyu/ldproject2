@@ -1,0 +1,6 @@
+<view class="test-color" bindtap="tapHandle">
+<slot name="before"></slot>
+林业大学 
+<slot name="after"></slot>
+</view>
+<view>{{testnum}}</view>

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/detail/index",
-    "pages/talk/index"
+    "pages/talk/index",
+    "pages/test/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -12,13 +13,13 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "selectedColor":"#d81e06",
+    "selectedColor": "#d81e06",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "电影",
         "iconPath": "image/movie.png",
-        "selectedIconPath":"image/movie1.png"
+        "selectedIconPath": "image/movie1.png"
       },
       {
         "pagePath": "pages/talk/index",
