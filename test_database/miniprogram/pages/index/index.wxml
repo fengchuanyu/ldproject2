@@ -1,0 +1,7 @@
+<button bindtap="addHandle">add</button>
+<button bindtap="getHandle">get</button>
+<view wx:for="{{testList}}" wx:key="inex">
+{{item.title}}
+<button bindtap="updataHandle"    data-id="{{item._id}}">update</button>
+<button bindtap="deleteHandle"    data-id="{{item._id}}">delete</button>
+</view>
