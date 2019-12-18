@@ -4,6 +4,10 @@
   </view>
   <button bindtap="addHandle">add</button>
 </view>
+
+<button data-order="0" bindtap="getOrder">全部</button>
+<button data-order="1" bindtap="getOrder">已完成</button>
+<button data-order="2" bindtap="getOrder">未完成</button>
 <!-- 列表区域 -->
 <view class="list-bar">
   <view 
@@ -11,7 +15,7 @@
   wx:key="index"
   class="list-item {{item.isCheck?'active':''}}" 
   bindtap="checkHandle"
-  data-id="{{item.id}}"
+  data-id="{{item._id}}"
   >
     <view class="item-chekbox">
       <checkbox checked="{{item.isCheck}}"/>
@@ -20,7 +24,7 @@
       {{item.title}}
     </view>
     <view class="item-btn">
-      <button size="mini" type="warn" data-id="{{item.id}}" bindtap="doneHandle">完成</button>
+      <button size="mini" type="warn" data-id="{{item._id}}" data-done="{{item.done}}" bindtap="doneHandle">{{item.done?"删除":"完成"}}</button>
     </view>
   </view>
 </view>
