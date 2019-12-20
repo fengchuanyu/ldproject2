@@ -47,6 +47,13 @@
 					"id": -1,
 					"name": "test_cloud",
 					"pathName": "pages/test_cloud/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "up_img",
+					"pathName": "pages/up_img/index",
 					"scene": null
 				}
 			]

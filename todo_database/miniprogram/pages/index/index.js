@@ -100,7 +100,6 @@ Page({
   },
   //选中状态
   checkHandle(e){
-    console.log("123")
     let thisId = e.currentTarget.dataset.id;
     let thisList= this.data.todoList;
     thisList = thisList.map((item)=>{
@@ -122,7 +121,6 @@ Page({
         thisIds.push(item._id)
       }
     })
-    console.log(thisIds)
     wx.cloud.callFunction({
       name:"todo_update2",
       data:{
@@ -130,6 +128,7 @@ Page({
       }
     }).then((res)=>{
       console.log(res)
+      this.getTodoList();
     })
   },
   /**
